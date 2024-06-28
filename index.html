@@ -1,121 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UT-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css"> 
-        <title></title>
-    </head>
-    <header class="cabecalho"></header>
-    <body>
-        <section class="paragrafo1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Do Campo à Cidade: Colhendo Oportunidades</title>
+</head>
+<header>
+    <div class="container">
+        <h1>Do Campo à Cidade: Colhendo Oportunidades</h1>
+    </div>
+</header>
+<body>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#praticas">Práticas Sustentáveis</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#links">Links Úteis</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="sobre" class="container">
+        <section>
+            <h2>Sobre</h2>
+            <p>Bem-vindo ao nosso site dedicado a explorar oportunidades sustentáveis do campo para a cidade. Aqui você encontrará informações sobre práticas agrícolas sustentáveis, iniciativas de urbanização consciente e muito mais.</p>
+            <a href="#praticas" class="button">Explorar Práticas Sustentáveis</a>
         </section>
-        <section class="paragrafo2">
+    </div>
+
+    <div id="praticas" class="container">
+        <section>
+            <h2>Práticas Sustentáveis</h2>
+            <p>Nesta seção, destacamos algumas práticas sustentáveis que podem ser implementadas para melhorar a conexão entre o campo e a cidade:</p>
+            <ul class="lista">
+                <li class="itens-lista">
+                    Uso de energias renováveis 
+                    <button class="practice-button" onclick="toggleDetails('energias_renovaveis')">Saiba mais</button>
+                    <div id="energias_renovaveis" class="practice-details hidden">
+                        <p><strong>Energia Solar: Entre várias, existe a energia solar, essa é captada através de painéis solares que convertem a luz do sol em eletricidade ou calor. É uma fonte abundante e amplamente disponível em muitas regiões.</strong></p>
+                    </div>
+                </li>
+                <li class="itens-lista">
+                    Agroecologia e agricultura orgânica 
+                    <button class="practice-button" onclick="toggleDetails('agroecologia')">Saiba mais</button>
+                    <div id="agroecologia" class="practice-details hidden">
+                        <p><strong>Uso de Fertilizantes e Pesticidas Naturais: A agricultura orgânica proíbe o uso de fertilizantes sintéticos e pesticidas químicos, optando por métodos naturais de manejo de pragas e doenças, como compostagem, rotação de culturas, controle biológico e adubação verde.</strong></p>
+                    </div>
+                </li>
+                <li class="itens-lista">
+                    Reciclagem e reaproveitamento de resíduos 
+                    <button class="practice-button" onclick="toggleDetails('reciclagem')">Saiba mais</button>
+                    <div id="reciclagem" class="practice-details hidden">
+                        <p><strong>Conservação de Recursos Naturais: Ao reciclar, evitamos o esgotamento de recursos como metais, plásticos e papel, que são limitados e têm impactos ambientais significativos quando extraídos.</strong></p>
+                    </div>
+                </li>
+                <li class="itens-lista">
+                    Mobilidade urbana sustentável 
+                    <button class="practice-button" onclick="toggleDetails('mobilidade_sustentavel')">Saiba mais</button>
+                    <div id="mobilidade_sustentavel" class="practice-details hidden">
+                        <p><strong>Transporte Público e Alternativo: Priorizar o transporte público acessível e eficiente, como ônibus, metrôs e trens, além de promover alternativas como bicicletas, patinetes elétricos e caminhadas, reduzindo a dependência de veículos individuais.</strong></p>
+                    </div>
+                </li>
+            </ul>
         </section>
-        <section class="conteudo-principal">
-            <h2 class="titulo-principal">O porquê de eu estar aqui<span>_</span></h2>
-            <div class="conteudo">
-                <div class="botoes">
-                    <button class="botao ativo">Projeto pessoal</button>
-                    <button class="botao">Esposrtes</button>
-                    <button class="botao">Possíveis conquistas</button>
-                    <button class="botao">How to livin in the USA?</button>
-                </div>
-                <div class="abas-textos">
-                    <div class="aba-conteudo ativo">
-                        <h3 class="aba-conteudo-titulo-principal">Tomar rumo da minha vida</h3>
-                        <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
-                        <div class="contador">
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="dias0"></p>
-                                <p class="contador-digito-texto">dias</p>
-                            </div>
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="horas0"></p>
-                                <p class="contador-digito-texto">horas</p>
-                            </div>
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="min0"></p>
-                                <p class="contador-digito-texto">min</p>
-                            </div>
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="seg0"></p>
-                                <p class="contador-digito-texto">seg</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aba-conteudo">
-                        <h3 class="aba-conteudo-titulo-principal">Fim do progresso de um ano no Skate</h3>
-                        <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
-                        <div class="contador">
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="dias1"></p>
-                                <p class="contador-digito-texto">dias</p>
-                            </div>
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="horas1"></p>
-                                <p class="contador-digito-texto">horas</p>
-                            </div>
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="min1"></p>
-                                <p class="contador-digito-texto">min</p>
-                            </div>
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="seg1"></p>
-                                <p class="contador-digito-texto">seg</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aba-conteudo">
-                        <h3 class="aba-conteudo-titulo-principal">Estudar para o ENEM</h3>
-                        <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
-                        <div class="contador">
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="dias2"></p>
-                                <p class="contador-digito-texto">dias</p>
-                            </div>
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="horas2"></p>
-                                <p class="contador-digito-texto">horas</p>
-                            </div>
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="min2"></p>
-                                <p class="contador-digito-texto">min</p>
-                            </div>
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="seg2"></p>
-                                <p class="contador-digito-texto">seg</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aba-conteudo">
-                        <h3 class="aba-conteudo-titulo-principal">Mostrar resultados no curso de inglês</h3>
-                        <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
-                        <div class="contador">
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="dias3"></p>
-                                <p class="contador-digito-texto">dias</p>
-                            </div>
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="horas3"></p>
-                                <p class="contador-digito-texto">horas</p>
-                            </div>
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="min3"></p>
-                                <p class="contador-digito-texto">min</p>
-                            </div>
-                            <div class="contador-digito">
-                                <p class="contador-digito-numero" id="seg3"></p>
-                                <p class="contador-digito-texto">seg</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    </div>
+
+    <div id="galeria" class="container">
+        <section>
+            <h2>Galeria</h2>
+            <div class="gallery">
+                <img src="imagem1.jpg" alt="Imagem 1">
+                <img src="imagem2.jpg" alt="Imagem 2">
+                <img src="imagem3.jpg" alt="Imagem 3">
             </div>
         </section>
-    </body>
+    </div>
 
-    <footer>
-    </footer>
-    <script src="main.js"></script>
+    <div id="contato" class="container">
+        <section>
+            <h2>Contato</h2>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <div id="links" class="container">
+        <section>
+            <h2>Links Úteis</h2>
+            <p>Aqui estão alguns links úteis relacionados a sustentabilidade:</p>
+            <ul class="lista">
+                <li><a href="https://www.mma.gov.br/sustentabilidade">Ministério do Meio Ambiente - Sustentabilidade</a></li>
+                <li><a href="https://www.embrapa.br/agroecologia">Embrapa - Agroecologia</a></li>
+                <li><a href="https://www.onu.org.br/ods">Objetivos de Desenvolvimento Sustentável (ODS)</a></li>
+            </ul>
+        </section>
+    </div>
+</body>
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Emanuel de Jesus Baarcote. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+
 </html>
