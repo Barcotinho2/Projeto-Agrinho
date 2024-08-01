@@ -161,3 +161,7 @@ section {
     text-align: center;
     grid-template-columns: 33% 33% 33%;
 }
+
+.logo{
+    height: 150px;
+}
